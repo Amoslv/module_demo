@@ -1,0 +1,34 @@
+ext {
+    //表示是作为module还是application
+    isModule = true
+
+    //applicationId版本号sdkVersion统一管理
+    android = [
+
+            compileSdkVersion        : 29,
+            buildToolsVersion        : 29,
+            applicationId            : "com.tsign.moudle.demo",
+            minSdkVersion            : 19,
+            targetSdkVersion         : 29,
+            versionCode              : 1,
+            versionName              : "1.0",
+            testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"
+    ]
+
+    //版本号
+    def APPCOMPAT_VERSION = "1.1.0"
+    def CONSTRAINT_LAYOUT_VERSION = "1.1.3"
+    def AROUTER_VERSION = "1.4.1"
+    def AROUTER_COMPILER_VERSION = "1.2.2"
+    def UTIL_MODULE_VERSION = '1.0.0'
+
+
+    //三方库统一管理
+    dependencies = [
+            appcompat     : 'androidx.appcompat:appcompat:' + APPCOMPAT_VERSION,
+            constraintLayout: 'androidx.constraintlayout:constraintlayout:' + CONSTRAINT_LAYOUT_VERSION,
+            arouter         : 'com.alibaba:arouter-api:' + AROUTER_VERSION,
+            arouterCompiler : 'com.alibaba:arouter-compiler:' + AROUTER_COMPILER_VERSION,
+            utilmodule      : 'com.example.utilmodule:utilmodule:' + UTIL_MODULE_VERSION
+    ]
+}
